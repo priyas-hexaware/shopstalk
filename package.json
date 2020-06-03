@@ -1,0 +1,24 @@
+{
+  "name": "training-project-1",
+  "version": "1.0.0",
+  "description": "cxt cct training1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node fsmodulecsv.js"
+  },
+  "author": "s.priyadharshini",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "excel4node": "^1.7.2",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "log4js": "^6.3.0",
+    "moment": "^2.26.0",
+    "msexcel-builder": "0.0.2",
+    "request": "^2.88.2"
+  }
+}
