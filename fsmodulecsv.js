@@ -139,9 +139,10 @@ app.post("/fulfillment",function(request, response){
 else if(intent == 'pincode validation')
  { 
     logger.info( JSON.stringify((request.body)));
+    var zipcode1;
 
     var zipcode =request.body.queryResult.parameters["zipcode"];
-    if(zipcode1 == zipcode.test( /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210")))
+    if( zipcode1 == zipcode.test( /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210")))
     {
       var res ="zipcode is valid.press yes to continue"
     }
