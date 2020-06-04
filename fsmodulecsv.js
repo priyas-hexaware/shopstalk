@@ -83,6 +83,7 @@ app.post("/changeName", function (request, response) {
     }
     response.send(data);
 });
+var zipcode1=90210
 //var bookingHistory=[];
 //var cardResponse=[];
 app.post("/fulfillment",function(request, response){
@@ -142,7 +143,7 @@ else if(intent == 'pincode validation')
 
 
     var zipcode =JSON.stringify(request.body.queryResult.parameters["zipcode"]);
-    var zipcode1=90210
+    //var zipcode1=90210
     //zipcode1 == ( /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210"))
     if (zipcode == zipcode1)
     {
