@@ -142,7 +142,8 @@ else if(intent == 'pincode validation')
     var zipcode1;
 
     var zipcode =request.body.queryResult.parameters["zipcode"];
-    if( zipcode1 == zipcode.test( /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210")))
+    zipcode1 == ( /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210"))
+    if (zipcode1 == true)
     {
       var res ="zipcode is valid.press yes to continue"
     }
