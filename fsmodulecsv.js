@@ -142,7 +142,7 @@ else if(intent == 'pincode validation')
 
 
     var zipcode =JSON.stringify(request.body.queryResult.parameters["zipcode"]);
-    var zipcode1="90210";
+    var zipcode1=90210
     //zipcode1 == ( /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210"))
     if (zipcode == zipcode1)
     {
