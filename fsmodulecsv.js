@@ -240,7 +240,7 @@ else if(intent == 'searchhistory') {
               {
                 "title": "",
                 "openUriAction": {
-                  "uri": "http://maps.google.co.in"
+                  "uri": ""
                 }
               }
             ]
@@ -249,8 +249,10 @@ else if(intent == 'searchhistory') {
       
         singleCard.basicCard.title = element.Zipcode ;
         singleCard.basicCard.subtitle = element.date;
+        singleCard.basicCard.image.imageUri = "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356";
         singleCard.basicCard.buttons[0].title= element.class;
-        singleCard.basicCard.imageUri = "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356";
+        singleCard.basicCard.buttons[1].openUriAction.uri= "http://maps.google.co.in"
+        
         cardResponse.push(singleCard);
     
     
@@ -259,39 +261,24 @@ else if(intent == 'searchhistory') {
         console.log("Response to User", JSON.stringify(responseJson4));
          response.send(responseJson4);
    }
-  
-    
-     //singleCard.card.title = element.bookingId;
-     //singleCard.card.subtitle = element.roomtype;
-     //singleCard.card.buttons[0].text = element.class;
-     //singleCard.card.imageUri = "https://setupmyhotel.com/images/Room-Type-Single-Room.jpg";
-     //cardResponse.push(singleCard);
- 
- 
-     //})
-     //responseJson2.fulfillmentMessages = cardResponse;
-     //console.log("Response to User", JSON.stringify(responseJson2));
-      //response.send(responseJson2);
-//}
-//else if(intent =='Default Fallback Intent')
-//{
-   // var responseJson4={
+else if(intent =='Default Fallback Intent')
+{
+    var responseJson4={
 
-    //} 
-    //responseJson4.fulfillmentMessages=  [
-      //  {
-        //  "quickReplies": {
-          //  "title": "sorry!!!i din't get you",
-            //"quickReplies": [
-              //"wanna book a room?",
-              //"book a room?",
-              //"need a room?"
-            //]
-          //},
-          //"platform": "FACEBOOK"
-        //}
-      //]
-//}
+    } 
+    responseJson4.fulfillmentMessages= [
+      {
+        "platform": "ACTIONS_ON_GOOGLE",
+        "simpleResponses": {
+          "simpleResponses": [
+            {
+              "textToSpeech": "enter proper zipcode!"
+            }
+          ]
+        }
+      }
+    ]
+}
     
 }); 
 app.listen(process.env.PORT || 8080, function () {
