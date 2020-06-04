@@ -172,16 +172,20 @@ else if(intent =='shopdisplay'){
 }
 
 
- //else if(intent == 'Room types Booking - custom')
- //{ 
-   // logger.info( JSON.stringify((request.body)));
-    //var ch ='HS';
-   //var number = ch.concat(Math.random().toString(36).substring(7));
-     //logger.info("congrats!!!ROOMBOOKING id:",number);
-    //var random_num = number;
-    //var str1="congrats your booking id is:"
-    //var result =str1.concat(random_num);
-    //var ra=request.body.queryResult.parameters["roomaccomdation"];
+ else if(intent == 'pincode validation')
+ { 
+    logger.info( JSON.stringify((request.body)));
+
+    var zipcode =request.body.queryResult.parameters["zipcode"];
+    if(zipcode ==  /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210"))
+    {
+      var res ="zipcode is valid"
+    }
+    else
+    {
+      var res ="zipcode invalid"
+    }
+  
     //var rt=request.body.queryResult.parameters["roomtype"];
     //var date =request.body.queryResult.parameters["date"];
     //var formattedDate = moment(date).format('DD-MM-YYYY');
@@ -195,13 +199,13 @@ else if(intent =='shopdisplay'){
         //class : "Booked"
     //})
 
-  //var responseJson1 ={
+  var responseJson1 ={
 
-  //}
+  }
     
     // bookingHistory.push(final);
     //logger.info(bookingHistory);
-  //responseJson1.fulfillmentText=final; 
+  responseJson1.fulfillmentText=res; 
   //responseJson1.fulfillmentMessages=[{
     //"card": {
       //  "title": result,
@@ -216,7 +220,8 @@ else if(intent =='shopdisplay'){
       //"platform": "FACEBOOK"
 
 //}]
-  //response.send(responseJson1);
+  response.send(responseJson1);
+}
 //}
 //else if(intent == 'orderHistory') {
    // var responseJson2 ={
