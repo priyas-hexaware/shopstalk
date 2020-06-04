@@ -158,7 +158,7 @@ else if(intent == 'pincode validation')
     }
     responseJson1.fulfillmentText=res; 
     response.send(responseJson1);
-  }
+ }
     
 else if(intent =='shopdisplay'){
     var responseJson3 ={
