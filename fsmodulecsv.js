@@ -164,34 +164,45 @@ else if(intent =='shopdisplay'){
     var responseJson3 ={
 
     }
-    responseJson3.fulfillmentMessages=[{
-          "platform": "ACTIONS_ON_GOOGLE",
-          "basicCard": {
-            "title": "test1",
-            "subtitle": "test2",
-            "formattedText": "map",
-            "image": {
-              "imageUri": "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356",
-              "accessibilityText": "map image"
-            },
-            "buttons": [
-              {
-                "title": "click here",
-                "openUriAction": {
-                  "uri": "http://maps.google.co.in"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "text": {
-            "text": [
-              ""
-            ]
-          }
+    responseJson3.fulfillmentMessages= [
+      {
+        "platform": "ACTIONS_ON_GOOGLE",
+        "simpleResponses": {
+          "simpleResponses": [
+            {
+              "textToSpeech": "you can search for shops near you location here"
+            }
+          ]
         }
-      ]
+      },
+      {
+        "platform": "ACTIONS_ON_GOOGLE",
+        "basicCard": {
+          "title": "test1",
+          "subtitle": "test2",
+          "formattedText": "map",
+          "image": {
+            "imageUri": "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356",
+            "accessibilityText": "map image"
+          },
+          "buttons": [
+            {
+              "title": "click here",
+              "openUriAction": {
+                "uri": "http://maps.google.co.in"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": {
+          "text": [
+            ""
+          ]
+        }
+      }
+    ]
       response.send(responseJson3);
     }
 
