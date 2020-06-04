@@ -189,7 +189,7 @@ else if(intent =='shopdisplay'){
         }
       ]
       response.send(responseJson3);
-}
+    }
 
     //var rt=request.body.queryResult.parameters["roomtype"];
     //var date =request.body.queryResult.parameters["date"];
