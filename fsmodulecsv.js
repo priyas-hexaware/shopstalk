@@ -252,7 +252,7 @@ else if(intent == 'searchhistory') {
         singleCard.basicCard.image.imageUri = "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356";
         singleCard.basicCard.image.accessibilityText = element.accessibilitytext;
         singleCard.basicCard.buttons[0].title= element.class;
-        singleCard.basicCard.buttons[0].openUriAction.uri= "http://maps.google.co.in"
+        singleCard.basicCard.buttons[1].openUriAction.uri= "http://maps.google.co.in"
         
         cardResponse.push(singleCard);
     
