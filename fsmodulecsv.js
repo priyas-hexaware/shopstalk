@@ -158,7 +158,9 @@ else if(intent == 'pincode validation')
     searchHistory.push({
       Zipcode : zipcode,
       date:formattedDate,
-      class : "searched"
+      class : "searched",
+      formattedtext:"map",
+      accessibilitytext:"mapimage"
   })
 
     
@@ -223,25 +225,34 @@ else if(intent == 'searchhistory') {
     logger.info(searchHistory)
     searchHistory.forEach(element => { 
         var singleCard={
-  
-        
-        
-          "platform": "ACTIONS_ON_GOOGLE",
+   "platform": "ACTIONS_ON_GOOGLE",
           
           "basicCard": {
             "title": "",
             "subtitle": "",
-            "formattedText": "map",
+            "formattedText": "",
             "image": {
               "imageUri": "",
-              "accessibilityText": "map image"
-            }
+              "accessibilityText": ""
+            },
+            "buttons": [
+              {
+                "title": "",
+                "openUriAction": {
+                  "uri": ""
+                }
+              }
+            ]
           }
         }
       
         singleCard.basicCard.title = element.Zipcode ;
         singleCard.basicCard.subtitle = element.date;
+        singleCard.basicCard.formattedText = element.formattedtext;
         singleCard.basicCard.image.imageUri = "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356";
+        singleCard.basicCard.image.accessibilityText = element.accessibilitytext;
+        singleCard.basicCard.buttons[0].title= element.class;
+        singleCard.basicCard.buttons[0].openUriAction.uri= "http://maps.google.co.in"
         
         cardResponse.push(singleCard);
     
