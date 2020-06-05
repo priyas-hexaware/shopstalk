@@ -235,23 +235,13 @@ else if(intent == 'searchhistory') {
             "image": {
               "imageUri": "",
               "accessibilityText": "map image"
-            },
-            "buttons": [
-              {
-                "title": "",
-                "openUriAction": {
-                  "uri": ""
-                }
-              }
-            ]
+            }
           }
         }
       
         singleCard.basicCard.title = element.Zipcode ;
         singleCard.basicCard.subtitle = element.date;
         singleCard.basicCard.image.imageUri = "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356";
-        singleCard.basicCard.buttons[0].title= element.class;
-        singleCard.basicCard.buttons[1].openUriAction.uri= "http://maps.google.co.in"
         
         cardResponse.push(singleCard);
     
@@ -263,10 +253,10 @@ else if(intent == 'searchhistory') {
    }
 else if(intent =='Default Fallback Intent')
 {
-    var responseJson4={
+    var responseJson5={
 
     } 
-    responseJson4.fulfillmentMessages= [
+    responseJson5.fulfillmentMessages= [
       {
         "platform": "ACTIONS_ON_GOOGLE",
         "simpleResponses": {
