@@ -252,7 +252,7 @@ else if(intent == 'searchhistory') {
     
     
         })
-        responseJson4.fulfillmentMessages = final;
+        responseJson4.fulfillmentText = final;
         console.log("Response to User", JSON.stringify(responseJson4));
          response.send(responseJson4);
    }
