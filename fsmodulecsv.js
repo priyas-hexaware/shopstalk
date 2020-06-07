@@ -189,8 +189,8 @@ else if(intent =='shopdisplay'){
       {
         "platform": "ACTIONS_ON_GOOGLE",
         "basicCard": {
-          "title": "test1",
-          "subtitle": "test2",
+          "title": "90210",
+          "subtitle": "08-06-2020",
           "formattedText": "map",
           "image": {
             "imageUri": "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356",
@@ -198,7 +198,7 @@ else if(intent =='shopdisplay'){
           },
           "buttons": [
             {
-              "title": "click here",
+              "title": "searched",
               "openUriAction": {
                 "uri": "http://maps.google.co.in"
               }
@@ -206,13 +206,6 @@ else if(intent =='shopdisplay'){
           ]
         }
       },
-      {
-        "text": {
-          "text": [
-            ""
-          ]
-        }
-      }
     ]
       response.send(responseJson3);
   
