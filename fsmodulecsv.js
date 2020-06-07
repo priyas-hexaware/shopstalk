@@ -147,11 +147,11 @@ else if(intent == 'pincode validation')
     //zipcode1 == ( /(^\d{5}$)|(^\d{5}-\d{4}$)/.test("90210"))
     if (zipcode == zipcode1)
     {
-      var res ="zipcode is valid.press yes to continue"
+      var res ="Zipcode is valid. Press yes to continue"
     }
     else
     {
-      var res ="zipcode invalid.PLEASE ENTER PROPER ZIPCODE!!"
+      var res ="Zipcode invalid. PLEASE ENTER PROPER ZIPCODE!!"
     }
     var date = request.body.date
     var formattedDate=moment(date).format('DD-MM-YYYY');
@@ -181,7 +181,7 @@ else if(intent =='shopdisplay'){
         "simpleResponses": {
           "simpleResponses": [
             {
-              "textToSpeech": "you can search for shops near you location here"
+              "textToSpeech": "You can search for shops near you location here"
             }
           ]
         }
@@ -266,7 +266,7 @@ else if(intent =='Default Fallback Intent')
         "simpleResponses": {
           "simpleResponses": [
             {
-              "textToSpeech": "enter proper zipcode!"
+              "textToSpeech": "Enter proper zipcode!"
             }
           ]
         }
