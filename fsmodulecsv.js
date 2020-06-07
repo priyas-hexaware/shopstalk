@@ -106,7 +106,7 @@ app.post("/fulfillment",function(request, response){
     var responseJson ={
 
     }
-    var txt_1 = "Dear alex!! What can I do for You"
+    var txt_1 = "Alex!! What can I do for You"
     var txt = greeting.concat(' '+txt_1);
     responseJson.fulfillmentText= txt;
     
