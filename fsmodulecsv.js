@@ -217,41 +217,42 @@ else if(intent == 'searchhistory') {
     }
     logger.info(searchHistory)
     searchHistory.forEach(element => { 
-        var singleCard={
-   "platform": "ACTIONS_ON_GOOGLE",
+        //var singleCard={
+   //"platform": "ACTIONS_ON_GOOGLE",
           
-          "basicCard": {
-            "title": "",
-            "subtitle": "",
-            "formattedText": "",
-            "image": {
-              "imageUri": "",
-              "accessibilityText": ""
-            },
-            "buttons": [
-              {
-                "title": "",
-                "openUriAction": {
-                  "uri": ""
-                }
-              }
-            ]
-          }
-        }
+          //"basicCard": {
+            //"title": "",
+           // "subtitle": "",
+           // "formattedText": "",
+           // "image": {
+             // "imageUri": "",
+              //"accessibilityText": ""
+            //},
+            //"buttons": [
+              //{
+               // "title": "",
+                //"openUriAction": {
+                 // "uri": ""
+               // }
+              //}
+            //]
+         // }
+        //}
       
-        singleCard.basicCard.title = element.Zipcode ;
-        singleCard.basicCard.subtitle = element.date;
-        singleCard.basicCard.formattedText = element.formattedtext;
-        singleCard.basicCard.image.imageUri = "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356";
-        singleCard.basicCard.image.accessibilityText = element.accessibilitytext;
-        singleCard.basicCard.buttons[0].title= element.class;
-        singleCard.basicCard.buttons[0].openUriAction.uri= "http://maps.google.co.in"
+        //singleCard.basicCard.title = element.Zipcode ;
+        //singleCard.basicCard.subtitle = element.date;
+        //singleCard.basicCard.formattedText = element.formattedtext;
+        //singleCard.basicCard.image.imageUri = "https://images.news18.com/ibnlive/uploads/2019/05/Google-Maps.jpg?impolicy=website&width=536&height=356";
+        //singleCard.basicCard.image.accessibilityText = element.accessibilitytext;
+        //singleCard.basicCard.buttons[0].title= element.class;
+       // singleCard.basicCard.buttons[0].openUriAction.uri= "http://maps.google.co.in"
         
-        cardResponse.push(singleCard);
+        //cardResponse.push(singleCard);
+        var final = "searchedzipcode:"+element.Zipcode+"\n"+"searcheddate:"+element.date+"\n"
     
     
         })
-        responseJson4.fulfillmentMessages = cardResponse;
+        responseJson4.fulfillmentMessages = final;
         console.log("Response to User", JSON.stringify(responseJson4));
          response.send(responseJson4);
    }
