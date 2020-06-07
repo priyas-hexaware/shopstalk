@@ -83,7 +83,7 @@ app.post("/changeName", function (request, response) {
     }
     response.send(data);
 });
-
+var final
 var searchHistory=[];
 var cardResponse=[];
 app.post("/fulfillment",function(request, response){
@@ -248,7 +248,7 @@ else if(intent == 'searchhistory') {
        // singleCard.basicCard.buttons[0].openUriAction.uri= "http://maps.google.co.in"
         
         //cardResponse.push(singleCard);
-        var final = "searchedzipcode:"+element.Zipcode+"\n"+"searcheddate:"+element.date+"\n"
+         final = "searchedzipcode:"+element.Zipcode+"\n"+"searcheddate:"+element.date+"\n"
     
     
         })
