@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "http": "0.0.1-security",
-    "log4js": "^6.3.0",
+    "log4js": "^6.4.0",
     "moment": "^2.26.0",
     "msexcel-builder": "0.0.2",
     "request": "^2.88.2"
